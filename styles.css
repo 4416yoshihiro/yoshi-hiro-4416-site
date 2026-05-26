@@ -140,7 +140,7 @@ img {
 }
 
 .hero-media {
-  background-image: url("assets/hero-sashimi.jpg");
+  background-image: url("hero-sashimi.jpg");
   background-repeat: no-repeat;
   background-position: center 67%;
   background-size: cover;
