@@ -932,3 +932,16 @@ img {
     transform: none;
   }
 }
+
+
+.instagram-band {
+    border: 0;
+    background: transparent;
+}
+
+@media (max-width: 840px) {
+    .band-copy h2 {
+          font-size: clamp(27px, 7.8vw, 34px);
+          letter-spacing: 0.06em;
+    }
+}
