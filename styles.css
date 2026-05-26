@@ -414,8 +414,8 @@ img {
   margin: 0 auto clamp(75px, 10vw, 120px);
   border: 1px solid var(--line);
   background:
-    radial-gradient(circle at top right, rgba(184, 149, 90, 0.14), transparent 45%),
-    var(--panel);
+
+    transparent;
 }
 
 .band-copy p:not(.overline) {
@@ -434,16 +434,16 @@ img {
   max-width: none;
   padding: clamp(72px, 10vw, 104px) 24px clamp(76px, 11vw, 112px);
   margin: 0 0 clamp(75px, 10vw, 120px);
-  color: #202124;
-  background: #fff;
+  color: var(--ink);
+  background: transparent;
 }
 
 .reviews .overline {
-  color: #806842;
+  color: var(--gold-light);
 }
 
 .reviews .section-heading h2 {
-  color: #282828;
+  color: var(--ink);
 }
 
 .review-carousel {
@@ -458,12 +458,24 @@ img {
   align-items: center;
   justify-content: center;
   margin: 24px 0 47px;
-  color: #5f6368;
+  color: var(--ink-muted);
+  .instagram-band {
+      border: 0;
+      background: transparent;
+  }
+  
+  @media (max-width: 840px) {
+      .band-copy h2 {
+            font-size: clamp(27px, 7.8vw, 34px);
+            letter-spacing: 0.06em;
+      }
+  }
+  
   font-size: 14px;
 }
 
 .review-rating strong {
-  color: #202124;
+  color: var(--ink);
   font-size: 30px;
   font-weight: 500;
 }
@@ -485,11 +497,11 @@ img {
   visibility: hidden;
   padding: clamp(32px, 6vw, 55px) clamp(27px, 8vw, 80px);
   text-align: left;
-  color: #202124;
-  border: 1px solid #ececec;
+  color: var(--ink);
+  border: 0;
   border-radius: 3px;
-  background: #fff;
-  box-shadow: 0 8px 25px rgba(32, 33, 36, 0.07);
+  background: transparent;
+  box-shadow: none;
   opacity: 0;
   transform: translateX(22px);
   transition: opacity 360ms ease, transform 360ms ease, visibility 360ms;
@@ -517,12 +529,12 @@ img {
 
 .review-meta {
   margin: 0;
-  color: #70757a;
+  color: var(--ink-muted);
   font-size: 13px;
 }
 
 .google-mark {
-  color: #df5542;
+  color: var(--gold-light);
   font-family: Arial, sans-serif;
   font-size: 37px;
   font-weight: 700;
@@ -542,7 +554,7 @@ img {
   font-size: clamp(20px, 2.7vw, 28px);
   letter-spacing: 0.05em;
   line-height: 2;
-  color: #151515;
+  color: var(--ink);
 }
 
 .review-controls {
@@ -556,11 +568,11 @@ img {
 .review-arrow {
   width: 48px;
   height: 48px;
-  color: #5f6368;
+  color: var(--ink-muted);
   font-size: 32px;
   line-height: 1;
   cursor: pointer;
-  border: 1px solid #dadce0;
+  border: 1px solid var(--line);
   border-radius: 50%;
   background: transparent;
   transition: border-color 180ms ease, color 180ms ease;
@@ -584,7 +596,7 @@ img {
   cursor: pointer;
   border: 0;
   border-radius: 50%;
-  background: #dadce0;
+  background: rgba(224, 189, 120, 0.28);
   transition: width 180ms ease, background 180ms ease;
 }
 
@@ -597,7 +609,7 @@ img {
 .review-map-link {
   display: inline-flex;
   margin-top: 39px;
-  color: #765628;
+  color: var(--gold-light);
   font-size: 14px;
   font-weight: 700;
   letter-spacing: 0.08em;
@@ -606,7 +618,7 @@ img {
 
 .review-source {
   margin: 15px 0 0;
-  color: #70757a;
+  color: var(--ink-muted);
   font-size: 11px;
 }
 
