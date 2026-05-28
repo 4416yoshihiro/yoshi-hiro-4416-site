@@ -305,10 +305,60 @@ img {
 }
 
 .promise {
+  position: relative;
+  overflow: hidden;
   min-height: 276px;
   padding: 34px 30px;
   border: 1px solid var(--line);
   background: var(--night-soft);
+}
+
+.promise-with-image {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  min-height: 340px;
+  background: #16100b;
+}
+
+.promise-with-image::after {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  content: "";
+  background:
+    linear-gradient(180deg, rgba(24, 17, 12, 0.14) 0%, rgba(24, 17, 12, 0.72) 62%, rgba(24, 17, 12, 0.9) 100%),
+    linear-gradient(90deg, rgba(24, 17, 12, 0.58) 0%, rgba(24, 17, 12, 0.12) 48%, rgba(24, 17, 12, 0.32) 100%);
+}
+
+.promise-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 46% 68%;
+  transform: scale(1.02);
+}
+
+.promise-with-image .promise-number,
+.promise-with-image h3,
+.promise-with-image p {
+  position: relative;
+  z-index: 2;
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.55);
+}
+
+.promise-with-image p {
+  color: rgba(250, 246, 237, 0.84);
+}
+
+.promise-seafood .promise-image {
+  object-position: 50% 72%;
+}
+
+.promise-time .promise-image {
+  object-position: 50% 58%;
 }
 
 .promise-number {
@@ -412,10 +462,8 @@ img {
   max-width: 1180px;
   padding: clamp(48px, 7vw, 76px);
   margin: 0 auto clamp(75px, 10vw, 120px);
-  border: 1px solid var(--line);
-  background:
-
-    transparent;
+  border: 0;
+  background: transparent;
 }
 
 .band-copy p:not(.overline) {
@@ -459,18 +507,6 @@ img {
   justify-content: center;
   margin: 24px 0 47px;
   color: var(--ink-muted);
-  .instagram-band {
-      border: 0;
-      background: transparent;
-  }
-  
-  @media (max-width: 840px) {
-      .band-copy h2 {
-            font-size: clamp(25px, 6.5vw, 29px);
-            letter-spacing: 0.06em;
-      }
-  }
-  
   font-size: 14px;
 }
 
@@ -499,7 +535,6 @@ img {
   text-align: left;
   color: var(--ink);
   border: 0;
-  border-radius: 3px;
   background: transparent;
   box-shadow: none;
   opacity: 0;
@@ -522,7 +557,7 @@ img {
 
 .reviewer {
   margin: 0 0 3px;
-  color: #111;
+  color: var(--ink);
   font-size: 21px;
   font-weight: 700;
 }
@@ -806,6 +841,10 @@ img {
     margin-bottom: 14px;
   }
 
+  .promise-with-image {
+    min-height: 320px;
+  }
+
   .signature {
     margin-bottom: 68px;
   }
@@ -824,6 +863,11 @@ img {
     padding: 42px 24px;
     margin-right: 18px;
     margin-left: 18px;
+  }
+
+  .band-copy h2 {
+    font-size: clamp(25px, 6.5vw, 29px);
+    letter-spacing: 0.06em;
   }
 
   .instagram-band .button {
@@ -931,17 +975,4 @@ img {
     opacity: 1;
     transform: none;
   }
-}
-
-
-.instagram-band {
-    border: 0;
-    background: transparent;
-}
-
-@media (max-width: 840px) {
-    .band-copy h2 {
-          font-size: clamp(25px, 6.5vw, 29px);
-          letter-spacing: 0.06em;
-    }
 }
