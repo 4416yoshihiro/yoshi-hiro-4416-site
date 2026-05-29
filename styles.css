@@ -665,8 +665,8 @@ img {
 
 .access-card {
   display: grid;
-  grid-template-columns: 1fr 300px;
-  gap: clamp(34px, 7vw, 80px);
+  grid-template-columns: 1fr;
+  gap: 30px;
   padding: clamp(36px, 7vw, 68px);
   margin-top: 46px;
   border: 1px solid var(--line);
@@ -703,13 +703,14 @@ img {
 }
 
 .access-map {
+  width: 100%;
   align-self: stretch;
 }
 
 .access-map iframe {
   display: block;
   width: 100%;
-  min-height: 270px;
+  min-height: clamp(320px, 48vw, 470px);
   border: 1px solid var(--line);
   filter: saturate(0.78) contrast(0.96);
 }
@@ -938,11 +939,11 @@ img {
   }
 
   .access-map {
-    margin-top: 30px;
+    margin-top: 16px;
   }
 
   .access-map iframe {
-    min-height: 260px;
+    min-height: 320px;
   }
 
   .access-note {
