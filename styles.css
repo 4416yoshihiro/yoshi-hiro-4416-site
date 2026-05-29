@@ -702,15 +702,26 @@ img {
   border-bottom: 1px solid var(--gold);
 }
 
-.access-actions {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  justify-content: center;
+.access-map {
+  align-self: stretch;
 }
 
-.button.outline {
-  border-color: var(--gold);
+.access-map iframe {
+  display: block;
+  width: 100%;
+  min-height: 270px;
+  border: 1px solid var(--line);
+  filter: saturate(0.78) contrast(0.96);
+}
+
+.map-link {
+  display: inline-block;
+  margin-top: 14px;
+  color: var(--gold-light);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  border-bottom: 1px solid var(--gold);
 }
 
 .access-note {
@@ -926,8 +937,12 @@ img {
     gap: 7px;
   }
 
-  .access-actions {
+  .access-map {
     margin-top: 30px;
+  }
+
+  .access-map iframe {
+    min-height: 260px;
   }
 
   .access-note {
