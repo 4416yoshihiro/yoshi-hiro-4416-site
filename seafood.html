@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#17110c">
+    <meta
+      name="description"
+      content="地酒と海鮮 四四一六の海鮮料理ギャラリー。鮮やかな海鮮の一皿を写真でご覧いただけます。"
+    >
+    <title>海鮮ギャラリー | 地酒と海鮮 四四一六</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@500;700;900&display=swap"
+      rel="stylesheet"
+    >
+    <link rel="stylesheet" href="styles.css?v=20260611-sake-gallery">
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <header class="site-header is-scrolled" data-header>
+      <a class="brand" href="index.html#top" aria-label="地酒と海鮮 四四一六 トップへ">
+        <span class="brand-small">地酒と海鮮</span>
+        <span class="brand-name">四四一六</span>
+      </a>
+      <nav class="desktop-nav" aria-label="主要メニュー">
+        <a href="index.html#kodawari">こだわり</a>
+        <a href="index.html#dish">料理と地酒</a>
+        <a href="index.html#reviews">お客様の声</a>
+        <a href="index.html#access">店舗情報</a>
+      </nav>
+      <a class="header-call" href="tel:08039444416">お電話</a>
+    </header>
+
+    <main>
+      <section class="gallery-hero" aria-label="海鮮ギャラリー">
+        <div class="gallery-hero-copy reveal">
+          <p class="overline">SEAFOOD GALLERY</p>
+          <h1>海鮮</h1>
+          <p>その日の一皿を、写真でもゆっくりと。見たい料理を選ぶと大きくご覧いただけます。</p>
+        </div>
+      </section>
+
+      <section class="seafood-gallery" aria-label="海鮮料理の写真一覧">
+        <button class="gallery-item reveal" type="button" data-lightbox-src="seafood-gallery-01.jpg" data-lightbox-alt="海鮮の和え物">
+          <img src="seafood-gallery-01.jpg" alt="海鮮の和え物" loading="lazy">
+        </button>
+        <button class="gallery-item reveal" type="button" data-lightbox-src="seafood-gallery-02.jpg" data-lightbox-alt="刺身の盛り合わせ">
+          <img src="seafood-gallery-02.jpg" alt="刺身の盛り合わせ" loading="lazy">
+        </button>
+        <button class="gallery-item reveal" type="button" data-lightbox-src="seafood-gallery-03.jpg" data-lightbox-alt="卵黄をのせた海鮮料理">
+          <img src="seafood-gallery-03.jpg" alt="卵黄をのせた海鮮料理" loading="lazy">
+        </button>
+        <button class="gallery-item reveal" type="button" data-lightbox-src="seafood-gallery-04.jpg" data-lightbox-alt="海苔と一緒に味わう海鮮料理">
+          <img src="seafood-gallery-04.jpg" alt="海苔と一緒に味わう海鮮料理" loading="lazy">
+        </button>
+      </section>
+
+      <div class="gallery-back">
+        <a class="text-link" href="index.html#kodawari">トップページへ戻る</a>
+      </div>
+    </main>
+
+    <div class="lightbox" data-lightbox aria-hidden="true">
+      <button class="lightbox-close" type="button" data-lightbox-close aria-label="拡大写真を閉じる">×</button>
+      <div class="lightbox-frame">
+        <img src="" alt="" data-lightbox-image>
+      </div>
+    </div>
+
+    <div class="mobile-dock" aria-label="お問い合わせ">
+      <a href="tel:08039444416">電話する</a>
+      <a
+        href="https://www.google.com/maps/search/?api=1&query=%E5%9C%B0%E9%85%92%E3%81%A8%E6%B5%B7%E9%AE%AE%20%E5%9B%9B%E5%9B%9B%E4%B8%80%E5%85%AD%20%E6%B2%96%E7%B8%84%E7%9C%8C%E6%B5%A6%E6%B7%BB%E5%B8%82%E4%BB%B2%E9%96%932%E4%B8%81%E7%9B%AE2-9"
+        target="_blank"
+        rel="noreferrer"
+      >地図</a>
+      <a href="https://www.instagram.com/yoshi_hiro_44_16/" target="_blank" rel="noreferrer">Instagram</a>
+    </div>
+  </body>
+</html>

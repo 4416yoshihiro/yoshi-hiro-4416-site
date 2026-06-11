@@ -93,3 +93,42 @@ if (carousel) {
   showSlide(activeIndex);
   startRotation();
 }
+
+const lightbox = document.querySelector("[data-lightbox]");
+
+if (lightbox) {
+  const lightboxImage = lightbox.querySelector("[data-lightbox-image]");
+  const closeButton = lightbox.querySelector("[data-lightbox-close]");
+  const galleryButtons = document.querySelectorAll("[data-lightbox-src]");
+
+  const closeLightbox = () => {
+    lightbox.classList.remove("is-open");
+    lightbox.setAttribute("aria-hidden", "true");
+    document.body.classList.remove("lightbox-lock");
+  };
+
+  galleryButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      lightboxImage.src = button.dataset.lightboxSrc;
+      lightboxImage.alt = button.dataset.lightboxAlt || "";
+      lightbox.classList.add("is-open");
+      lightbox.setAttribute("aria-hidden", "false");
+      document.body.classList.add("lightbox-lock");
+      closeButton.focus();
+    });
+  });
+
+  closeButton.addEventListener("click", closeLightbox);
+
+  lightbox.addEventListener("click", (event) => {
+    if (event.target === lightbox) {
+      closeLightbox();
+    }
+  });
+
+  window.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && lightbox.classList.contains("is-open")) {
+      closeLightbox();
+    }
+  });
+}
