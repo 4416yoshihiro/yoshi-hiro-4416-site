@@ -987,12 +987,17 @@ body.lightbox-lock {
 
 @media (max-width: 840px) {
   body {
-    padding-bottom: 64px;
+    padding-bottom: 0;
   }
 
   .site-header {
     height: 64px;
     padding: 0 18px;
+    transition: none;
+  }
+
+  .site-header.is-scrolled {
+    backdrop-filter: none;
   }
 
   .brand {
@@ -1017,7 +1022,9 @@ body.lightbox-lock {
   }
 
   .hero-media {
+    animation: none;
     background-position: 57% center;
+    transform: scale(1.03);
   }
 
   .hero h1 {
@@ -1213,30 +1220,14 @@ body.lightbox-lock {
   }
 
   .mobile-dock {
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 40;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    height: 64px;
-    background: #f4eadb;
+    display: none;
   }
 
-  .mobile-dock a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--night);
-    font-size: 13px;
-    font-weight: 700;
-    border-right: 1px solid rgba(23, 17, 12, 0.13);
-  }
-
-  .mobile-dock a:first-child {
-    color: white;
-    background: var(--vermilion);
+  .reveal,
+  .reveal.is-visible {
+    opacity: 1;
+    transform: none;
+    transition: none;
   }
 }
 
